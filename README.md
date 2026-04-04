@@ -1,7 +1,7 @@
 # 🤖 Robotics & Arduino — Techbase STEM Academy
 
 > **Free intermediate Robotics course by [Techbase Consultant Services](https://techbasengr.com.ng), Ibadan, Nigeria**  
-> Instructor: Babatunde Awolaja · [github.com/techbaseng](https://github.com/techbaseng)
+> Instructor: Babatunde Awoyemi · [github.com/techbaseng](https://github.com/techbaseng)
 
 ---
 
