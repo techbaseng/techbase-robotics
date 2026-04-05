@@ -30,32 +30,33 @@ By the end of this course you will be able to:
 
 ---
 
-## Course Lessons
+## Prerequisites
 
-| # | Topic | File |
-|---|-------|------|
-| 01 | Introduction to Robotics & Arduino — microcontrollers, the Arduino board, IDE setup | [lesson_01.md](lessons/lesson_01.md) |
-| 02 | Your First Sketch — `setup()`, `loop()`, blinking the onboard LED | [lesson_02.md](lessons/lesson_02.md) |
-| 03 | Digital Output — controlling external LEDs, resistors, breadboard wiring | [lesson_03.md](lessons/lesson_03.md) |
-| 04 | Digital Input — push buttons, `digitalRead()`, debouncing | [lesson_04.md](lessons/lesson_04.md) |
-| 05 | Analog Input & Output — potentiometers, `analogRead()`, PWM with `analogWrite()` | [lesson_05.md](lessons/lesson_05.md) |
-| 06 | Sensors I — ultrasonic distance sensor (HC-SR04), measuring distance | [lesson_06.md](lessons/lesson_06.md) |
-| 07 | Sensors II — infrared sensors, temperature sensors (LM35 / DHT11) | [lesson_07.md](lessons/lesson_07.md) |
-| 08 | Motors — servo motors, DC motors, and the L298N motor driver | [lesson_08.md](lessons/lesson_08.md) |
-| 09 | Serial Communication — `Serial.print()`, debugging, sending data to computer | [lesson_09.md](lessons/lesson_09.md) |
-| 10 | Mini Project — Build an Obstacle-Avoiding Robot | [lesson_10.md](lessons/lesson_10.md) |
+- Basic understanding of programming concepts (variables, conditions, loops)
+- Completion of **Scratch Programming** or **Python Programming** is strongly recommended
+- No prior electronics experience required — all circuit concepts are explained from scratch
 
 ---
 
 ## How to Use This Course
 
 1. **Start here** — read this page and gather your components (see list below)
-2. **Open Lesson 01** — click the link in the table above
+2. **Open Lesson 01** — click the link in the table below
 3. **Read the lesson** — each file explains the concept with circuit diagrams and code
 4. **Build and upload** — wire the circuit and upload the code to your Arduino
 5. **Move forward** — go to the next lesson whenever you are ready
 
 > ⚠️ **Safety note:** Always disconnect your Arduino from power before changing your circuit wiring. Double-check connections before powering on.
+
+---
+
+## Tools You Will Need
+
+| Tool | Purpose | Link |
+|------|---------|------|
+| Arduino IDE | Write and upload code to Arduino | [arduino.cc/en/software](https://www.arduino.cc/en/software) |
+| VS Code + Arduino extension | Alternative editor | [code.visualstudio.com](https://code.visualstudio.com) |
+| Tinkercad Circuits | Simulate circuits online (no hardware needed for early lessons) | [tinkercad.com](https://www.tinkercad.com) |
 
 ---
 
@@ -81,21 +82,20 @@ By the end of this course you will be able to:
 
 ---
 
-## Software You Will Need
+## Course Lessons
 
-| Tool | Purpose | Link |
-|------|---------|------|
-| Arduino IDE | Write and upload code to Arduino | [arduino.cc/en/software](https://www.arduino.cc/en/software) |
-| VS Code + Arduino extension | Alternative editor | [code.visualstudio.com](https://code.visualstudio.com) |
-| Tinkercad Circuits | Simulate circuits online (no hardware needed for early lessons) | [tinkercad.com](https://www.tinkercad.com) |
-
----
-
-## Prerequisites
-
-- Basic understanding of programming concepts (variables, conditions, loops)
-- Completion of **Scratch Programming** or **Python Programming** is strongly recommended
-- No prior electronics experience required — all circuit concepts are explained from scratch
+| # | Topic | File |
+|---|-------|------|
+| 01 | Introduction to Robotics & Arduino — microcontrollers, the Arduino board, IDE setup | [lesson_01.md](lessons/lesson_01.md) |
+| 02 | Your First Sketch — `setup()`, `loop()`, blinking the onboard LED | [lesson_02.md](lessons/lesson_02.md) |
+| 03 | Digital Output — controlling external LEDs, resistors, breadboard wiring | [lesson_03.md](lessons/lesson_03.md) |
+| 04 | Digital Input — push buttons, `digitalRead()`, debouncing | [lesson_04.md](lessons/lesson_04.md) |
+| 05 | Analog Input & Output — potentiometers, `analogRead()`, PWM with `analogWrite()` | [lesson_05.md](lessons/lesson_05.md) |
+| 06 | Sensors I — ultrasonic distance sensor (HC-SR04), measuring distance | [lesson_06.md](lessons/lesson_06.md) |
+| 07 | Sensors II — infrared sensors, temperature sensors (LM35 / DHT11) | [lesson_07.md](lessons/lesson_07.md) |
+| 08 | Motors — servo motors, DC motors, and the L298N motor driver | [lesson_08.md](lessons/lesson_08.md) |
+| 09 | Serial Communication — `Serial.print()`, debugging, sending data to computer | [lesson_09.md](lessons/lesson_09.md) |
+| 10 | Mini Project — Build an Obstacle-Avoiding Robot | [lesson_10.md](lessons/lesson_10.md) |
 
 ---
 
