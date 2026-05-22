@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robotics &amp; Arduino — Techbase STEM Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fafc;--surface:#fff;--s2:#f1f5f9;--border:#e2e8f0;--border2:#cbd5e1;--text:#0f172a;--t2:#334155;--muted:#64748b;--light:#94a3b8;--D:'Space Grotesk',sans-serif;--B:'Plus Jakarta Sans',sans-serif;--M:'JetBrains Mono',monospace;--sh:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.06);--sh2:0 4px 12px rgba(0,0,0,.1),0 16px 48px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--B);font-size:16px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.nav-logo{font-family:var(--D);font-weight:700;font-size:1rem;color:var(--text);text-decoration:none}
+.nav-logo em{font-style:normal;color:#0d9488}
+.nav-links{list-style:none;display:flex;align-items:center;gap:1.8rem}
+.nav-links a{color:var(--muted);font-size:.875rem;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.hero{padding:100px 2rem 70px;background:var(--hero-bg);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:50px 50px;opacity:.5;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 0%,transparent 100%)}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:5rem;align-items:center}
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;border-radius:100px;padding:.28rem 1rem;font-family:var(--M);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid;font-weight:500}
+h1{font-family:var(--D);font-weight:700;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.05;letter-spacing:-.03em;color:var(--text);margin-bottom:1.2rem;animation:rise .6s .1s both}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:2rem;animation:rise .6s .2s both}
+.hero-sub code{font-family:var(--M);font-size:.88em;background:var(--s2);border:1px solid var(--border2);padding:.1rem .4rem;border-radius:4px}
+.hero-stats{display:flex;gap:2.5rem;margin-bottom:2rem;animation:rise .6s .3s both}
+.stat-n{font-family:var(--D);font-weight:700;font-size:1.9rem;display:block;line-height:1}
+.stat-l{font-size:.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:.1rem}
+.btn-row{display:flex;gap:.75rem;flex-wrap:wrap;animation:rise .6s .4s both}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;color:#fff;font-family:var(--D);font-weight:600;font-size:.875rem;padding:.8rem 1.6rem;border-radius:10px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:translateY(-2px)}
+.btn-g{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);color:var(--t2);font-family:var(--D);font-weight:600;font-size:.875rem;padding:.8rem 1.6rem;border-radius:10px;text-decoration:none;border:1.5px solid var(--border2);transition:border-color .2s,box-shadow .2s}
+.btn-g:hover{border-color:var(--light);box-shadow:var(--sh)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* PREVIEW CARD (right side of hero) */
+.prev-card{background:#0f172a;border-radius:16px;overflow:hidden;box-shadow:var(--sh2);animation:rise .6s .5s both}
+.pc-bar{padding:.75rem 1rem;background:#1e293b;display:flex;align-items:center;gap:.4rem}
+.dot{width:9px;height:9px;border-radius:50%}.dr{background:#ff5f57}.dy{background:#febc2e}.dg{background:#28c840}
+.pc-tab{margin-left:.5rem;font-family:var(--M);font-size:.65rem;color:#64748b}
+.pc-body{padding:1.3rem 1.5rem;font-family:var(--M);font-size:.78rem;line-height:2;color:#e2e8f0}
+/* TICKER */
+.ticker-wrap{overflow:hidden;padding:.65rem 0}
+.ticker{display:flex;white-space:nowrap;animation:scroll 30s linear infinite}
+.ti{font-family:var(--M);font-size:.72rem;padding:0 2rem}
+.ti em{font-style:normal}
+.ti::after{content:'·';margin-left:2rem;opacity:.3}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* SECTIONS */
+.sec{padding:5rem 0}
+.sec-div{border-top:1px solid var(--border)}
+.sec-white{background:var(--surface)}
+.slbl{font-family:var(--M);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;font-weight:500}
+.sec-h2{font-family:var(--D);font-weight:700;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.025em;line-height:1.15;color:var(--text)}
+/* ABOUT 2-COL */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4.5rem;align-items:start}
+.about-text h2{font-family:var(--D);font-weight:700;font-size:clamp(1.5rem,2.8vw,2rem);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2;color:var(--text)}
+.about-text p{color:var(--muted);margin-bottom:.9rem;line-height:1.8;font-size:.95rem}
+.learn-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-top:.5rem}
+.learn-list li{display:flex;align-items:flex-start;gap:.7rem;font-size:.9rem;color:var(--t2)}
+.learn-list li::before{content:'✓';font-family:var(--M);flex-shrink:0;margin-top:2px;font-size:.8rem;font-weight:700}
+/* TOOLS CARD */
+.tc{background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--sh)}
+.tc-head{padding:.85rem 1.4rem;border-bottom:1px solid var(--border);font-family:var(--M);font-size:.7rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;background:var(--s2)}
+.tc-row{display:flex;align-items:center;justify-content:space-between;padding:.95rem 1.4rem;border-bottom:1px solid var(--border);transition:background .15s}
+.tc-row:last-child{border-bottom:none}.tc-row:hover{background:var(--s2)}
+.tc-name{font-weight:600;font-size:.88rem;color:var(--text)}
+.tc-info{font-size:.78rem;color:var(--muted)}
+.tc-link{font-family:var(--M);font-size:.68rem;color:#0284c7;text-decoration:none;opacity:.75;transition:opacity .2s}
+.tc-link:hover{opacity:1}
+/* PHASE DIVIDER */
+.phase-div{display:flex;align-items:center;gap:1rem;margin:2.5rem 0 1rem}
+.phase-div span{font-family:var(--M);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;font-weight:500}
+.phase-div::after{content:'';flex:1;height:1px;background:var(--border)}
+/* LESSON GRID */
+.lesson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--border);border:1.5px solid var(--border);border-radius:16px;overflow:hidden}
+.lc{background:var(--surface);padding:1.15rem 1.4rem;display:flex;align-items:flex-start;gap:.85rem;text-decoration:none;transition:background .18s;position:relative}
+.lc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;transform:scaleY(0);transform-origin:bottom;transition:transform .2s}
+.lc:hover{background:var(--s2)}.lc:hover::before{transform:scaleY(1)}
+.lnum{font-family:var(--M);font-size:.63rem;padding:.15rem .5rem;border-radius:5px;border:1px solid;flex-shrink:0;margin-top:3px;font-weight:500}
+.ltitle{font-size:.875rem;color:var(--t2);line-height:1.45;transition:color .18s}
+.lc:hover .ltitle{color:var(--text)}
+/* STEPS */
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem;position:relative}
+.steps-row::before{content:'';position:absolute;top:26px;left:calc(12.5% + 1rem);right:calc(12.5% + 1rem);height:1.5px;opacity:.25;background:linear-gradient(90deg,#0d9488,#3b82f6,#f59e0b,#0d9488)}
+.step{text-align:center}
+.step-n{width:52px;height:52px;border-radius:50%;background:var(--surface);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:var(--M);font-size:.8rem;font-weight:500;margin:0 auto 1.1rem;transition:border-color .2s,box-shadow .2s;position:relative;z-index:1}
+.step h3{font-family:var(--D);font-weight:600;font-size:.93rem;margin-bottom:.4rem;color:var(--text)}
+.step p{font-size:.83rem;color:var(--muted);line-height:1.65}
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.65);padding:4rem 2rem 2rem}
+.fi{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.fb{font-family:var(--D);font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:.4rem}
+.fb p{font-family:var(--B);font-weight:400;font-size:.82rem;margin-top:.3rem;line-height:1.65}
+.fl-h{font-family:var(--D);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.fl{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.fl a{color:rgba(255,255,255,.6);font-size:.84rem;text-decoration:none;transition:color .2s}
+.fl a:hover{color:#fff}
+.f-bot{max-width:1200px;margin:1.5rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.4)}
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.sr.in{opacity:1;transform:none}
+/* RESPONSIVE */
+@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:2.5rem}.steps-row{grid-template-columns:1fr 1fr;gap:1.5rem}.steps-row::before{display:none}.fi{grid-template-columns:1fr 1fr;gap:2rem}.nav-links li:not(.keep){display:none}}
+@media(max-width:600px){.hero-inner{grid-template-columns:1fr}.lesson-grid{grid-template-columns:1fr}.steps-row{grid-template-columns:1fr}h1{font-size:2rem}.fi{grid-template-columns:1fr}}
+
+:root{--c:#7c3aed;--hero-bg:linear-gradient(160deg,#f5f3ff 0%,#f8fafc 50%,#ede9fe 100%)}
+.eyebrow{color:#7c3aed;background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.2)}
+.stat-n{color:#7c3aed}.slbl{color:#7c3aed}
+.step-n{color:#7c3aed}.step:hover .step-n{border-color:#7c3aed;box-shadow:0 0 0 4px rgba(124,58,237,.1)}
+.lc::before{background:#7c3aed}.lnum{color:#7c3aed;background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.2)}
+.btn-p{background:#7c3aed;box-shadow:0 4px 14px rgba(124,58,237,.3)}.btn-p:hover{box-shadow:0 8px 24px rgba(124,58,237,.4)}
+.ticker-wrap{background:#f5f3ff;border-top:1px solid #ddd6fe;border-bottom:1px solid #ddd6fe}
+.ti{color:#4c1d95}.ti em{color:#7c3aed}.fb{color:#7c3aed}
+.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.kit-item{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:.85rem 1rem;transition:border-color .2s}
+.kit-item:hover{border-color:#ddd6fe}
+.kit-name{font-weight:600;font-size:.85rem;color:var(--text);display:block}
+.kit-info{font-size:.75rem;color:var(--muted)}
+@media(max-width:600px){.kit-grid{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner">
+  <a href="https://techbaseng.github.io" class="nav-logo"><em>Techbase</em> Academy</a>
+  <ul class="nav-links">
+    <li class="keep"><a href="#lessons">Lessons</a></li><li><a href="#about">About</a></li>
+    <li><a href="https://techbaseng.github.io">← All Courses</a></li>
+    <li class="keep"><a href="lessons/lesson_01.html" style="color:#7c3aed;font-weight:600">Start Course →</a></li>
+  </ul>
+</div></nav>
+<section class="hero"><div class="hero-grid"></div>
+<div class="hero-inner">
+  <div>
+    <div class="eyebrow">Free Course · Intermediate · Hardware Required</div>
+    <h1>Robotics &amp;<br>Arduino</h1>
+    <p class="hero-sub">Code the physical world. Sensors, motors, circuits and logic — build a fully autonomous obstacle-avoiding robot from scratch across <strong>12 hands-on lessons</strong>.</p>
+    <div class="hero-stats">
+      <div><span class="stat-n">12</span><span class="stat-l">Lessons</span></div>
+      <div><span class="stat-n">1</span><span class="stat-l">Robot Build</span></div>
+      <div><span class="stat-n">Arduino</span><span class="stat-l">Platform</span></div>
+    </div>
+    <div class="btn-row">
+      <a href="lessons/lesson_01.html" class="btn-p">Start Lesson 01 →</a>
+      <a href="#lessons" class="btn-g">View All 12 Lessons</a>
+    </div>
+  </div>
+  <div style="animation:rise .6s .5s both">
+    <div style="background:#0f172a;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15)">
+      <div style="padding:.75rem 1rem;background:#1e293b;display:flex;align-items:center;gap:.4rem">
+        <span style="width:9px;height:9px;border-radius:50%;background:#ff5f57"></span>
+        <span style="width:9px;height:9px;border-radius:50%;background:#febc2e"></span>
+        <span style="width:9px;height:9px;border-radius:50%;background:#28c840"></span>
+        <span style="margin-left:.5rem;font-family:'JetBrains Mono',monospace;font-size:.65rem;color:#64748b">obstacle_robot.ino</span>
+      </div>
+      <div style="padding:1.3rem 1.5rem;font-family:'JetBrains Mono',monospace;font-size:.78rem;line-height:2;color:#e2e8f0">
+        <div style="color:#64748b">// Lesson 12 — Obstacle-Avoiding Robot</div>
+        <div><span style="color:#c084fc">int</span> dist = <span style="color:#38bdf8">getDistance</span>();</div>
+        <div>&nbsp;</div>
+        <div><span style="color:#c084fc">if</span> (dist &lt; <span style="color:#fb923c">20</span>) <span style="color:#94a3b8">{</span></div>
+        <div style="padding-left:1.2em"><span style="color:#38bdf8">stopMotors</span>();</div>
+        <div style="padding-left:1.2em"><span style="color:#38bdf8">turnRight</span>(<span style="color:#fb923c">500</span>);</div>
+        <div><span style="color:#94a3b8">}</span> <span style="color:#c084fc">else</span> <span style="color:#94a3b8">{</span></div>
+        <div style="padding-left:1.2em"><span style="color:#38bdf8">moveForward</span>();</div>
+        <div><span style="color:#94a3b8">}</span></div>
+      </div>
+      <div style="padding:.65rem 1.2rem 1rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#475569;background:#0f172a;border-top:1px solid #1e293b">
+        <span style="color:#34d399">✓</span> <span style="color:rgba(255,255,255,.35)">Obstacle detected → stop → turn → continue</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+  <span class="ti"><em>Arduino</em> microcontroller</span><span class="ti"><em>digitalRead</em> input</span><span class="ti"><em>analogRead</em> sensors</span><span class="ti"><em>L298N</em> motor driver</span><span class="ti"><em>HC-SR04</em> ultrasonic</span><span class="ti"><em>servo</em> motors</span><span class="ti"><em>IR sensor</em> line following</span><span class="ti"><em>PWM</em> speed control</span><span class="ti"><em>chassis</em> assembly</span>
+  <span class="ti"><em>Arduino</em> microcontroller</span><span class="ti"><em>digitalRead</em> input</span><span class="ti"><em>analogRead</em> sensors</span><span class="ti"><em>L298N</em> motor driver</span><span class="ti"><em>HC-SR04</em> ultrasonic</span><span class="ti"><em>servo</em> motors</span><span class="ti"><em>IR sensor</em> line following</span><span class="ti"><em>PWM</em> speed control</span><span class="ti"><em>chassis</em> assembly</span>
+</div></div>
+<main>
+<section class="sec" id="about"><div class="wrap"><div class="about-grid sr">
+  <div class="about-text">
+    <div class="slbl">About This Course</div>
+    <h2>Build robots that think.</h2>
+    <p>Robotics brings programming into the physical world. You'll use an Arduino microcontroller to read sensors, control motors and write logic that makes your robot respond to its environment — fully autonomously.</p>
+    <p>Designed by <strong>Babatunde Awoyemi</strong>, Techbase Consultant Services, Ibadan. 12 progressive lessons culminating in a full autonomous obstacle-avoiding robot build.</p>
+    <ul class="learn-list">
+      <li>Arduino IDE setup, sketches, pins and power</li>
+      <li>Digital and analog inputs — buttons, LDR, temperature sensors</li>
+      <li>DC motor control with the L298N driver module</li>
+      <li>Ultrasonic distance sensing with the HC-SR04</li>
+      <li>Servo motors, robot arms and movement</li>
+      <li>Line following and IR remote control</li>
+      <li>Full autonomous robot build with obstacle avoidance</li>
+    </ul>
+  </div>
+  <div>
+    <div class="slbl" style="margin-bottom:1rem">Hardware Kit</div>
+    <div class="kit-grid">
+      <div class="kit-item"><span class="kit-name">Arduino Uno R3</span><span class="kit-info">Main microcontroller board</span></div>
+      <div class="kit-item"><span class="kit-name">L298N Motor Driver</span><span class="kit-info">Controls two DC motors</span></div>
+      <div class="kit-item"><span class="kit-name">HC-SR04 Sensor</span><span class="kit-info">Ultrasonic distance</span></div>
+      <div class="kit-item"><span class="kit-name">2× DC Motors</span><span class="kit-info">With wheels &amp; chassis</span></div>
+      <div class="kit-item"><span class="kit-name">Servo Motor</span><span class="kit-info">For arm / turret</span></div>
+      <div class="kit-item"><span class="kit-name">IR Sensor + Remote</span><span class="kit-info">Wireless control</span></div>
+      <div class="kit-item"><span class="kit-name">LEDs, Resistors</span><span class="kit-info">Basic circuit components</span></div>
+      <div class="kit-item"><span class="kit-name">Breadboard + Wires</span><span class="kit-info">Prototyping connections</span></div>
+    </div>
+    <p style="font-size:.78rem;color:#64748b;margin-top:1rem;line-height:1.6">Hardware can be purchased locally in Ibadan or online. Full kits are available at most electronics markets. Lessons include wiring diagrams for each component.</p>
+  </div>
+</div></div></section>
+
+<section class="sec sec-div sec-white" id="lessons"><div class="wrap">
+  <div class="sr"><div class="slbl">Course Content</div><h2 class="sec-h2">12 Lessons — One Robot</h2></div>
+  <div class="lesson-grid sr">
+  <a href="lessons/lesson_01.html" class="lc"><span class="lnum">01</span><span class="ltitle">Introduction to Robotics &amp; Arduino<br><span style="font-size:.78rem;color:#64748b;font-weight:400">What robots are, how Arduino works, installing the IDE and your first sketch.</span></span></a>
+  <a href="lessons/lesson_02.html" class="lc"><span class="lnum">02</span><span class="ltitle">Understanding the Arduino Board<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Pins, power, digital vs analog, voltage levels and board variants.</span></span></a>
+  <a href="lessons/lesson_03.html" class="lc"><span class="lnum">03</span><span class="ltitle">Your First Sketch — Blinking an LED<br><span style="font-size:.78rem;color:#64748b;font-weight:400">digitalWrite, delay, setup() and loop() — the foundation of every Arduino program.</span></span></a>
+  <a href="lessons/lesson_04.html" class="lc"><span class="lnum">04</span><span class="ltitle">Digital Inputs — Push Buttons<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Reading button presses with digitalRead, pull-up resistors and debouncing.</span></span></a>
+  <a href="lessons/lesson_05.html" class="lc"><span class="lnum">05</span><span class="ltitle">Analog Inputs — Potentiometers &amp; Sensors<br><span style="font-size:.78rem;color:#64748b;font-weight:400">analogRead, mapping values, LDR light sensors and temperature sensors.</span></span></a>
+  <a href="lessons/lesson_06.html" class="lc"><span class="lnum">06</span><span class="ltitle">Controlling Motors — DC Motors &amp; L298N<br><span style="font-size:.78rem;color:#64748b;font-weight:400">How DC motors work, using the L298N motor driver and controlling speed.</span></span></a>
+  <a href="lessons/lesson_07.html" class="lc"><span class="lnum">07</span><span class="ltitle">Ultrasonic Distance Sensor (HC-SR04)<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Measuring distance with echo timing, connecting HC-SR04 and reading cm values.</span></span></a>
+  <a href="lessons/lesson_08.html" class="lc"><span class="lnum">08</span><span class="ltitle">Servo Motors &amp; Robotic Arms<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Servo library, controlling angle, sweeping motion and building a simple arm.</span></span></a>
+  <a href="lessons/lesson_09.html" class="lc"><span class="lnum">09</span><span class="ltitle">Line Following Robot<br><span style="font-size:.78rem;color:#64748b;font-weight:400">IR sensors, reading analog/digital line values and proportional steering logic.</span></span></a>
+  <a href="lessons/lesson_10.html" class="lc"><span class="lnum">10</span><span class="ltitle">Infrared Remote Control<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Decoding IR signals with IRremote library, mapping buttons to actions.</span></span></a>
+  <a href="lessons/lesson_11.html" class="lc"><span class="lnum">11</span><span class="ltitle">Building Your First Autonomous Robot<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Combining motors, ultrasonic sensor and logic to avoid obstacles automatically.</span></span></a>
+  <a href="lessons/lesson_12.html" class="lc"><span class="lnum">12</span><span class="ltitle">Capstone — Obstacle-Avoiding Robot<br><span style="font-size:.78rem;color:#64748b;font-weight:400">Full build guide: chassis assembly, wiring, code, calibration and testing.</span></span></a>
+</div>
+
+</div></section>
+
+<section class="sec sec-div"><div class="wrap sr">
+  <div class="slbl">How It Works</div><h2 class="sec-h2" style="margin-bottom:3rem">Build as you learn.</h2>
+  <div class="steps-row">
+    <div class="step"><div class="step-n">01</div><h3>Get the Hardware</h3><p>Buy the components kit locally or online. A full list is in Lesson 01 with recommended sources.</p></div>
+    <div class="step"><div class="step-n">02</div><h3>Install Arduino IDE</h3><p>Download and install the free Arduino IDE. Lesson 01 walks you through setup step by step.</p></div>
+    <div class="step"><div class="step-n">03</div><h3>Build Each Circuit</h3><p>Every lesson includes a wiring diagram. Connect components to the breadboard as shown.</p></div>
+    <div class="step"><div class="step-n">04</div><h3>Upload &amp; Test</h3><p>Upload the sketch to your Arduino. Watch your robot respond. Debug, tweak, and improve.</p></div>
+  </div>
+</div></section>
+</main>
+<footer>
+  <div class="fi">
+    <div><div class="fb">Robotics &amp; Arduino</div><p>Part of the Techbase STEM Academy free course series. Ibadan, Nigeria.</p></div>
+    <div><p class="fl-h">Lessons</p><ul class="fl"><li><a href="#lessons">All 12 Lessons</a></li><li><a href="https://github.com/techbaseng/techbase-robotics" target="_blank">GitHub Repo</a></li></ul></div>
+    <div><p class="fl-h">Related</p><ul class="fl"><li><a href="https://techbaseng.github.io/techbase-python/">← Python</a></li><li><a href="https://techbaseng.github.io/techbase-scratch/">← Scratch</a></li></ul></div>
+    <div><p class="fl-h">Academy</p><ul class="fl"><li><a href="https://techbaseng.github.io">← All Courses</a></li><li><a href="https://techbasengr.com.ng" target="_blank">Website</a></li></ul></div>
+  </div>
+  <div class="f-bot"><span>© 2025 Techbase Consultant Services</span><span>MIT License · Made with ❤️ in Ibadan</span></div>
+</footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.07});document.querySelectorAll('.sr').forEach(el=>io.observe(el));</script>
+</body></html>
