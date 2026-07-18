@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Robotics &amp; micro:bit — Techbase STEM Academy</title>
-<meta name="description" content="Free BBC micro:bit robotics course. 36 projects across Beginner, Intermediate and Advanced phases. By Techbase, Ibadan, Nigeria.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="Free BBC micro:bit robotics course. 123 projects from microbit.org across Beginner, Intermediate and Advanced levels. Techbase, Ibadan, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f8fafc;--surface:#fff;--s2:#f1f5f9;--border:#e2e8f0;--border2:#cbd5e1;--text:#0f172a;--t2:#334155;--muted:#64748b;--light:#94a3b8;--D:'Space Grotesk',sans-serif;--B:'Plus Jakarta Sans',sans-serif;--M:'JetBrains Mono',monospace;--sh:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.06);--sh2:0 4px 12px rgba(0,0,0,.1),0 16px 48px rgba(0,0,0,.08)}
@@ -104,28 +102,26 @@ footer{background:var(--text);color:rgba(255,255,255,.65);padding:4rem 2rem 2rem
 .btn-p{background:#7c3aed;box-shadow:0 4px 14px rgba(124,58,237,.3)}.btn-p:hover{box-shadow:0 8px 24px rgba(124,58,237,.4)}
 .ticker-wrap{background:#f5f3ff;border-top:1px solid #ddd6fe;border-bottom:1px solid #ddd6fe}
 .ti{color:#4c1d95}.ti em{color:#7c3aed}.fb{color:#7c3aed}
-.level-pill{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--M);font-size:.6rem;padding:.15rem .6rem;border-radius:100px;border:1px solid;font-weight:600;margin-bottom:.5rem;letter-spacing:.06em;text-transform:uppercase}
+.level-pill{display:inline-flex;align-items:center;font-family:var(--M);font-size:.58rem;padding:.12rem .55rem;border-radius:100px;border:1px solid;font-weight:600;margin-bottom:.3rem;letter-spacing:.05em;text-transform:uppercase}
 .pill-beg{color:#059669;background:rgba(5,150,105,.07);border-color:rgba(5,150,105,.25)}
 .pill-int{color:#d97706;background:rgba(217,119,6,.07);border-color:rgba(217,119,6,.25)}
 .pill-adv{color:#7c3aed;background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.25)}
-.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
-.kit-item{background:var(--surface);border:1.5px solid var(--border);border-radius:9px;padding:.75rem .9rem;transition:border-color .2s}
-.kit-item:hover{border-color:#ddd6fe}
-.kit-name{font-weight:600;font-size:.83rem;color:var(--text);display:block}
-.kit-info{font-size:.73rem;color:var(--muted)}
-@media(max-width:600px){.kit-grid{grid-template-columns:1fr}}
+.stats-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;margin-top:2.5rem}
+.stats-cell{background:var(--surface);padding:1.3rem 1.5rem;text-align:center}
+.stats-n{font-family:var(--D);font-weight:700;font-size:2rem;display:block;line-height:1;margin-bottom:.2rem}
+.stats-n.beg{color:#059669}.stats-n.int{color:#d97706}.stats-n.adv{color:#7c3aed}
+.stats-l{font-size:.75rem;color:var(--muted);font-family:var(--M);font-weight:500;letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-inner">
     <a href="https://techbaseng.github.io" class="nav-logo"><em>Techbase</em> Academy</a>
     <ul class="nav-links">
-      <li class="keep"><a href="#lessons">Lessons</a></li>
+      <li class="keep"><a href="#lessons">Projects</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://techbaseng.github.io">← All Courses</a></li>
-      <li class="keep"><a href="lessons/lesson_01.html" style="color:#7c3aed;font-weight:600">Start Course →</a></li>
+      <li class="keep"><a href="lessons/lesson_001.html" style="color:#7c3aed;font-weight:600">Start →</a></li>
     </ul>
   </div>
 </nav>
@@ -136,234 +132,246 @@ footer{background:var(--text);color:rgba(255,255,255,.65);padding:4rem 2rem 2rem
     <div>
       <div class="eyebrow">Free Course · Beginner → Advanced · Ibadan, Nigeria</div>
       <h1>Robotics &amp;<br>micro:bit</h1>
-      <p class="hero-sub">From your first LED heart to AI activity detection — <strong>36 hands-on projects</strong> powered by the BBC micro:bit across 3 progressive phases. No prior experience needed.</p>
+      <p class="hero-sub">All <strong>123 official projects</strong> from microbit.org — the complete BBC micro:bit catalogue. Every project links directly to the official guide and MakeCode starter code.</p>
       <div class="hero-stats">
-        <div><span class="stat-n">36</span><span class="stat-l">Projects</span></div>
-        <div><span class="stat-n">3</span><span class="stat-l">Phases</span></div>
+        <div><span class="stat-n">123</span><span class="stat-l">Projects</span></div>
+        <div><span class="stat-n">3</span><span class="stat-l">Levels</span></div>
         <div><span class="stat-n">None</span><span class="stat-l">Prerequisites</span></div>
       </div>
       <div class="btn-row">
-        <a href="lessons/lesson_01.html" class="btn-p">Start Project 01 →</a>
-        <a href="#lessons" class="btn-g">View All 36 Projects</a>
+        <a href="lessons/lesson_001.html" class="btn-p">Start Project 001 →</a>
+        <a href="#lessons" class="btn-g">Browse All 123</a>
       </div>
     </div>
     <div class="prev-card">
-      <div class="pc-bar">
-        <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
-        <span class="pc-tab">main.py — MakeCode Python</span>
-      </div>
+      <div class="pc-bar"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="pc-tab">microbit.org — 123 projects</span></div>
       <div class="pc-body">
-        <div style="color:#64748b"># Lesson 30 — Reaction Game</div>
-        <div><span style="color:#c084fc">def</span> <span style="color:#38bdf8">on_button_pressed_a</span>():</div>
-        <div style="padding-left:1.2em"><span style="color:#c084fc">if</span> waiting:</div>
-        <div style="padding-left:2.4em">t = <span style="color:#38bdf8">input</span>.running_time()</div>
-        <div style="padding-left:2.4em">reaction = t - start_time</div>
-        <div style="padding-left:2.4em"><span style="color:#38bdf8">basic</span>.show_number(reaction)</div>
+        <div style="color:#64748b"># Phase 1 — Beginner</div>
+        <div><span style="color:#86efac">57</span> <span style="color:#e2e8f0">projects · LED, buttons, sensors</span></div>
         <div>&nbsp;</div>
-        <div style="color:#64748b"># Lesson 31 — Fireflies</div>
-        <div><span style="color:#c084fc">def</span> <span style="color:#38bdf8">on_received_string</span>(msg):</div>
-        <div style="padding-left:1.2em"><span style="color:#c084fc">global</span> phase</div>
-        <div style="padding-left:1.2em">phase += <span style="color:#fb923c">5</span>  <span style="color:#64748b"># nudge toward sync</span></div>
+        <div style="color:#64748b"># Phase 2 — Intermediate</div>
+        <div><span style="color:#fbbf24">47</span> <span style="color:#e2e8f0">projects · radio, data logging, AI</span></div>
+        <div>&nbsp;</div>
+        <div style="color:#64748b"># Phase 3 — Advanced</div>
+        <div><span style="color:#c084fc">19</span> <span style="color:#e2e8f0">projects · alarms, guitars, fireflies</span></div>
+        <div>&nbsp;</div>
+        <div style="color:#64748b"># All projects link to →</div>
+        <div><span style="color:#38bdf8">microbit.org/projects/make-it-code-it/</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <span class="ti"><em>LED</em> matrix</span>
-    <span class="ti"><em>buttons</em> input</span>
-    <span class="ti"><em>accelerometer</em> motion</span>
-    <span class="ti"><em>compass</em> bearing</span>
-    <span class="ti"><em>radio</em> wireless</span>
-    <span class="ti"><em>microphone</em> sound</span>
-    <span class="ti"><em>pins</em> GPIO</span>
-    <span class="ti"><em>data logging</em> CSV</span>
-    <span class="ti"><em>CreateAI</em> machine learning</span>
-    <span class="ti"><em>encryption</em> security</span>
-    <span class="ti"><em>LED</em> matrix</span>
-    <span class="ti"><em>buttons</em> input</span>
-    <span class="ti"><em>accelerometer</em> motion</span>
-    <span class="ti"><em>compass</em> bearing</span>
-    <span class="ti"><em>radio</em> wireless</span>
-    <span class="ti"><em>microphone</em> sound</span>
-    <span class="ti"><em>pins</em> GPIO</span>
-    <span class="ti"><em>data logging</em> CSV</span>
-    <span class="ti"><em>CreateAI</em> machine learning</span>
-    <span class="ti"><em>encryption</em> security</span>
-  </div>
-</div>
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+  <span class="ti"><em>LED</em> display</span><span class="ti"><em>buttons</em> input</span><span class="ti"><em>accelerometer</em></span><span class="ti"><em>compass</em></span><span class="ti"><em>radio</em> wireless</span><span class="ti"><em>microphone</em></span><span class="ti"><em>pins</em> GPIO</span><span class="ti"><em>data logging</em></span><span class="ti"><em>CreateAI</em></span><span class="ti"><em>temperature</em> sensor</span><span class="ti"><em>light</em> sensor</span><span class="ti"><em>encryption</em></span>
+  <span class="ti"><em>LED</em> display</span><span class="ti"><em>buttons</em> input</span><span class="ti"><em>accelerometer</em></span><span class="ti"><em>compass</em></span><span class="ti"><em>radio</em> wireless</span><span class="ti"><em>microphone</em></span><span class="ti"><em>pins</em> GPIO</span><span class="ti"><em>data logging</em></span><span class="ti"><em>CreateAI</em></span><span class="ti"><em>temperature</em> sensor</span><span class="ti"><em>light</em> sensor</span><span class="ti"><em>encryption</em></span>
+</div></div>
 
 <main>
-<section class="sec" id="about">
-  <div class="wrap">
-    <div class="about-grid sr">
-      <div class="about-text">
-        <div class="slbl">About This Course</div>
-        <h2>Code the physical world.</h2>
-        <p>The BBC micro:bit is a pocket-sized computer designed to make physical computing accessible to everyone. With sensors, buttons, a radio, a speaker and a programmable LED matrix all built in, it is perfect for learning how to make code interact with the real world.</p>
-        <p>This course takes you through <strong>36 carefully curated projects</strong> from the official microbit.org catalogue, arranged in a progressive sequence from absolute beginner to advanced. Every lesson links directly to the official project page at microbit.org for the starter code and MakeCode editor. Designed by <strong>Babatunde Awoyemi</strong>, Techbase Consultant Services, Ibadan.</p>
-        <ul class="learn-list">
-          <li>LED display — images, animations, custom pixel art</li>
-          <li>Buttons, shake and accelerometer input</li>
-          <li>Temperature, light, sound and compass sensors</li>
-          <li>Radio communication between multiple micro:bits</li>
-          <li>Pins and crocodile clips for external components</li>
-          <li>Data logging — collect, download and analyse CSV data</li>
-          <li>Machine learning with the CreateAI tool</li>
-          <li>Encryption, security systems and real-world applications</li>
-        </ul>
-      </div>
-      <div>
-        <div class="slbl" style="margin-bottom:1rem">What You Need</div>
-        <div class="kit-grid">
-          <div class="kit-item"><span class="kit-name">BBC micro:bit v2</span><span class="kit-info">Main device — required</span></div>
-          <div class="kit-item"><span class="kit-name">USB Cable (Micro-B)</span><span class="kit-info">For uploading code</span></div>
-          <div class="kit-item"><span class="kit-name">Chrome or Edge</span><span class="kit-info">For MakeCode editor</span></div>
-          <div class="kit-item"><span class="kit-name">Battery Pack</span><span class="kit-info">For wireless projects</span></div>
-          <div class="kit-item"><span class="kit-name">Crocodile Clips</span><span class="kit-info">For pin projects (P2+)</span></div>
-          <div class="kit-item"><span class="kit-name">Aluminium Foil</span><span class="kit-info">For guitar and alarms</span></div>
-          <div class="kit-item"><span class="kit-name">Second micro:bit</span><span class="kit-info">For radio projects (P13+)</span></div>
-          <div class="kit-item"><span class="kit-name">PIR Sensor</span><span class="kit-info">For Lesson 33 only</span></div>
-        </div>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:.9rem;line-height:1.65">Most projects only need the micro:bit and USB cable. Extra components are introduced gradually and flagged in each lesson's sidebar.</p>
-      </div>
+<section class="sec" id="about"><div class="wrap"><div class="about-grid sr">
+  <div class="about-text">
+    <div class="slbl">About This Course</div>
+    <h2>The complete micro:bit catalogue.</h2>
+    <p>This course contains all <strong>123 official projects</strong> from the BBC micro:bit foundation at microbit.org — the complete Make It: Code It catalogue. Every single project is included, arranged in order from absolute beginner to advanced.</p>
+    <p>Each project page on this site links directly to the official microbit.org guide where you will find the full step-by-step instructions, MakeCode starter code, and extension challenges. You only need a BBC micro:bit v2, a USB cable, and a Chrome or Edge browser to get started. Designed and compiled by <strong>Babatunde Awoyemi</strong>, Techbase Consultant Services, Ibadan.</p>
+    <div class="stats-bar">
+      <div class="stats-cell"><span class="stats-n beg">57</span><span class="stats-l">Beginner</span></div>
+      <div class="stats-cell"><span class="stats-n int">47</span><span class="stats-l">Intermediate</span></div>
+      <div class="stats-cell"><span class="stats-n adv">19</span><span class="stats-l">Advanced</span></div>
     </div>
   </div>
-</section>
-
-<section class="sec sec-div sec-white" id="lessons">
-  <div class="wrap">
-    <div class="sr">
-      <div class="slbl">Course Content</div>
-      <h2 class="sec-h2">36 Projects &middot; 3 Phases</h2>
-    </div>
-
-    <div class="phase-div sr"><span>Phase 1 — Beginner (01–12)</span></div>
-    <div class="lesson-grid sr">
-      <a href="lessons/lesson_01.html" class="lc"><span class="lnum">01</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Heart — Light up your micro:bit with love</span></a>
-      <a href="lessons/lesson_02.html" class="lc"><span class="lnum">02</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Beating Heart — Animate a beating heart with loops</span></a>
-      <a href="lessons/lesson_03.html" class="lc"><span class="lnum">03</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Animated Animals — Create your own pixel animal animations</span></a>
-      <a href="lessons/lesson_04.html" class="lc"><span class="lnum">04</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Emotion Badge — Express your feelings with buttons</span></a>
-      <a href="lessons/lesson_05.html" class="lc"><span class="lnum">05</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Dice — Shake to roll a random number</span></a>
-      <a href="lessons/lesson_06.html" class="lc"><span class="lnum">06</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Step Counter — Count your steps with the accelerometer</span></a>
-      <a href="lessons/lesson_07.html" class="lc"><span class="lnum">07</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Thermometer — Read the built-in temperature sensor</span></a>
-      <a href="lessons/lesson_08.html" class="lc"><span class="lnum">08</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Nightlight — Automatic light when it gets dark</span></a>
-      <a href="lessons/lesson_09.html" class="lc"><span class="lnum">09</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Jukebox — Play built-in tunes with buttons</span></a>
-      <a href="lessons/lesson_10.html" class="lc"><span class="lnum">10</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Counter — Count anything with a tally counter</span></a>
-      <a href="lessons/lesson_11.html" class="lc"><span class="lnum">11</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Compass Bearing — Build a working compass</span></a>
-      <a href="lessons/lesson_12.html" class="lc"><span class="lnum">12</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Dance Steps — Program a dance routine using loops</span></a>
-    </div>
-
-    <div class="phase-div sr"><span>Phase 2 — Intermediate (13–24)</span></div>
-    <div class="lesson-grid sr">
-      <a href="lessons/lesson_13.html" class="lc"><span class="lnum">13</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sensitive Step Counter — Improve accuracy with thresholds</span></a>
-      <a href="lessons/lesson_14.html" class="lc"><span class="lnum">14</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Max-Min Thermometer — Track highest and lowest temperatures</span></a>
-      <a href="lessons/lesson_15.html" class="lc"><span class="lnum">15</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Compass North — Multi-sensory North detector</span></a>
-      <a href="lessons/lesson_16.html" class="lc"><span class="lnum">16</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Make Some Noise — Connect an external speaker with clips</span></a>
-      <a href="lessons/lesson_17.html" class="lc"><span class="lnum">17</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Frère Jacques Loops — Play a melody using loops and functions</span></a>
-      <a href="lessons/lesson_18.html" class="lc"><span class="lnum">18</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>micro:bit Pet — Interactive pet with hunger, mood and energy</span></a>
-      <a href="lessons/lesson_19.html" class="lc"><span class="lnum">19</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Simple Door Alarm — Detect when a door is opened</span></a>
-      <a href="lessons/lesson_20.html" class="lc"><span class="lnum">20</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Treasure Hunt — Find a hidden micro:bit using radio strength</span></a>
-      <a href="lessons/lesson_21.html" class="lc"><span class="lnum">21</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sound Logger — Record and analyse environmental sound data</span></a>
-      <a href="lessons/lesson_22.html" class="lc"><span class="lnum">22</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Candle — Blow out an electronic candle with the microphone</span></a>
-      <a href="lessons/lesson_23.html" class="lc"><span class="lnum">23</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Environment Data Logger — Log temperature, light and sound</span></a>
-      <a href="lessons/lesson_24.html" class="lc"><span class="lnum">24</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Hot and Cold Game — Two-player search game using radio</span></a>
-    </div>
-
-    <div class="phase-div sr"><span>Phase 3 — Advanced (25–36)</span></div>
-    <div class="lesson-grid sr">
-      <a href="lessons/lesson_25.html" class="lc"><span class="lnum">25</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Proximity Beacon — Multi-zone radio proximity alarm</span></a>
-      <a href="lessons/lesson_26.html" class="lc"><span class="lnum">26</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Guitar 1 Touch Tunes — Build a playable foil guitar</span></a>
-      <a href="lessons/lesson_27.html" class="lc"><span class="lnum">27</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Guitar 2 Chords — Play full chords on your micro:bit guitar</span></a>
-      <a href="lessons/lesson_28.html" class="lc"><span class="lnum">28</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Tilt Alarm — Wireless alarm triggered by tilting</span></a>
-      <a href="lessons/lesson_29.html" class="lc"><span class="lnum">29</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Light Alarm — Alarm when light enters a protected space</span></a>
-      <a href="lessons/lesson_30.html" class="lc"><span class="lnum">30</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Reaction Game — Two-player millisecond reaction timer</span></a>
-      <a href="lessons/lesson_31.html" class="lc"><span class="lnum">31</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Fireflies — Sync multiple micro:bits like real fireflies</span></a>
-      <a href="lessons/lesson_32.html" class="lc"><span class="lnum">32</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Energy Light Meter — Survey light for sustainability decisions</span></a>
-      <a href="lessons/lesson_33.html" class="lc"><span class="lnum">33</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>PIR Movement Alarm — External sensor wireless alarm</span></a>
-      <a href="lessons/lesson_34.html" class="lc"><span class="lnum">34</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Secure Messaging — Encrypt messages with a Caesar cipher</span></a>
-      <a href="lessons/lesson_35.html" class="lc"><span class="lnum">35</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>AI Activity Timer — Train AI to detect your activities</span></a>
-      <a href="lessons/lesson_36.html" class="lc"><span class="lnum">36</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Audible Rock Paper Scissors — Full radio multiplayer game</span></a>
-    </div>
+  <div class="tc">
+    <div class="tc-head"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>&nbsp;&nbsp;what_you_need.txt</div>
+    <div class="tc-row"><div><div class="tc-name">BBC micro:bit v2</div><div class="tc-info">Main device — required for all projects</div></div><a href="https://microbit.org/buy/" class="tc-link" target="_blank">↗ Buy</a></div>
+    <div class="tc-row"><div><div class="tc-name">USB cable (Micro-B)</div><div class="tc-info">For uploading code</div></div><span class="tc-link">Included in kit</span></div>
+    <div class="tc-row"><div><div class="tc-name">Chrome or Edge browser</div><div class="tc-info">For the MakeCode editor</div></div><span class="tc-link">Free download</span></div>
+    <div class="tc-row"><div><div class="tc-name">Battery pack (optional)</div><div class="tc-info">For wireless radio projects</div></div><span class="tc-link">AAA × 2</span></div>
+    <div class="tc-row"><div><div class="tc-name">Second micro:bit (optional)</div><div class="tc-info">Required for radio projects (p.27+)</div></div><a href="https://microbit.org/buy/" class="tc-link" target="_blank">↗ Buy</a></div>
+    <div class="tc-row"><div><div class="tc-name">Crocodile clips (optional)</div><div class="tc-info">Required for pin projects</div></div><span class="tc-link">From electronics shops</span></div>
   </div>
-</section>
+</div></div></section>
 
-<section class="sec sec-div">
-  <div class="wrap sr">
-    <div class="slbl">How It Works</div>
-    <h2 class="sec-h2" style="margin-bottom:3rem">Learn at your own pace.</h2>
-    <div class="steps-row">
-      <div class="step">
-        <div class="step-n">01</div>
-        <h3>Get a micro:bit</h3>
-        <p>BBC micro:bit v2 is widely available in Nigeria from electronics suppliers or online. A USB cable and Chrome browser are all you also need to start.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">02</div>
-        <h3>Open Lesson 01</h3>
-        <p>Click the first project card above. Each lesson page has step-by-step instructions and a direct link to the official micro:bit project on microbit.org.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">03</div>
-        <h3>Code &amp; Upload</h3>
-        <p>Write or adapt the code in the MakeCode editor. Click Download, copy the .hex file to your micro:bit drive and watch it run instantly.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">04</div>
-        <h3>Extend &amp; Explore</h3>
-        <p>Each lesson has extension challenges to go further. Complete all 36 to finish the course — then build something completely original.</p>
-      </div>
-    </div>
+<section class="sec sec-div sec-white" id="lessons"><div class="wrap">
+  <div class="sr"><div class="slbl">All 123 Projects</div><h2 class="sec-h2">Browse by Phase</h2></div>
+
+  <div class="phase-div sr"><span>Phase 1 — Beginner (001–057) · 57 Projects</span></div>
+  <div class="lesson-grid sr">
+  <a href="lessons/lesson_001.html" class="lc"><span class="lnum">001</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Heart<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Light up your micro:bit with love by showing a heart</span></span></a>
+  <a href="lessons/lesson_002.html" class="lc"><span class="lnum">002</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Beating Heart<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make your micro:bit's heart beat using loops</span></span></a>
+  <a href="lessons/lesson_003.html" class="lc"><span class="lnum">003</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Animated Animals<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Animate your own animals on the micro:bit display</span></span></a>
+  <a href="lessons/lesson_004.html" class="lc"><span class="lnum">004</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Emotion Badge<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use your micro:bit to express how you're feeling</span></span></a>
+  <a href="lessons/lesson_005.html" class="lc"><span class="lnum">005</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Get Silly<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Shake your micro:bit to make a silly face appear</span></span></a>
+  <a href="lessons/lesson_006.html" class="lc"><span class="lnum">006</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Flashing Emotions<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make flashing happy and sad faces</span></span></a>
+  <a href="lessons/lesson_007.html" class="lc"><span class="lnum">007</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Here Comes the Sun<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Create sunshine on your micro:bit</span></span></a>
+  <a href="lessons/lesson_008.html" class="lc"><span class="lnum">008</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Shining Sunbeams<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a flashing sunbeam animation</span></span></a>
+  <a href="lessons/lesson_009.html" class="lc"><span class="lnum">009</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Sunlight Sensor<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make your micro:bit light up when the sun comes up</span></span></a>
+  <a href="lessons/lesson_010.html" class="lc"><span class="lnum">010</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Name Badge<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Turn your micro:bit into an animated name badge</span></span></a>
+  <a href="lessons/lesson_011.html" class="lc"><span class="lnum">011</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Dice<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Shake your micro:bit to make random numbers</span></span></a>
+  <a href="lessons/lesson_012.html" class="lc"><span class="lnum">012</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Magic 8-Ball<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a toy to tell your fortune</span></span></a>
+  <a href="lessons/lesson_013.html" class="lc"><span class="lnum">013</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Rock Paper Scissors<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Recreate a classic game with two micro:bits</span></span></a>
+  <a href="lessons/lesson_014.html" class="lc"><span class="lnum">014</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Graphical Dice<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make micro:bit dice with dots</span></span></a>
+  <a href="lessons/lesson_015.html" class="lc"><span class="lnum">015</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Step Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make your own step counter with a micro:bit</span></span></a>
+  <a href="lessons/lesson_016.html" class="lc"><span class="lnum">016</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Low Energy Step Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make an energy-efficient step counter</span></span></a>
+  <a href="lessons/lesson_017.html" class="lc"><span class="lnum">017</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Jumping Cat<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make the Scratch cat jump using your micro:bit</span></span></a>
+  <a href="lessons/lesson_018.html" class="lc"><span class="lnum">018</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Theremin<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Control a mysterious musical instrument in Scratch</span></span></a>
+  <a href="lessons/lesson_019.html" class="lc"><span class="lnum">019</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Boom-Box<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a micro:bit Scratch boom-box</span></span></a>
+  <a href="lessons/lesson_020.html" class="lc"><span class="lnum">020</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Hungry Dino<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make your own wireless game controller for Scratch</span></span></a>
+  <a href="lessons/lesson_021.html" class="lc"><span class="lnum">021</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Paint<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Paint a picture in Scratch by moving your micro:bit</span></span></a>
+  <a href="lessons/lesson_022.html" class="lc"><span class="lnum">022</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Scratch Guitar<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play chords on a micro:bit guitar with Scratch</span></span></a>
+  <a href="lessons/lesson_023.html" class="lc"><span class="lnum">023</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Compass Bearing<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Turn your micro:bit into a simple compass</span></span></a>
+  <a href="lessons/lesson_024.html" class="lc"><span class="lnum">024</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Thermometer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a simple thermometer with your micro:bit</span></span></a>
+  <a href="lessons/lesson_025.html" class="lc"><span class="lnum">025</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Nightlight<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Create an automatic light that turns on when it's dark</span></span></a>
+  <a href="lessons/lesson_026.html" class="lc"><span class="lnum">026</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Jukebox<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use buttons to play different tunes</span></span></a>
+  <a href="lessons/lesson_027.html" class="lc"><span class="lnum">027</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Teleporting Duck<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Teleport a duck between micro:bits using radio</span></span></a>
+  <a href="lessons/lesson_028.html" class="lc"><span class="lnum">028</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Count skips, jumps, birds — or anything!</span></span></a>
+  <a href="lessons/lesson_029.html" class="lc"><span class="lnum">029</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Activity Picker<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Can't agree on what to do? Let your micro:bit decide!</span></span></a>
+  <a href="lessons/lesson_030.html" class="lc"><span class="lnum">030</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Simple Tilt Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">A visual and audible alarm when something is picked up</span></span></a>
+  <a href="lessons/lesson_031.html" class="lc"><span class="lnum">031</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Calming LEDs<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Regulate your breathing and relax</span></span></a>
+  <a href="lessons/lesson_032.html" class="lc"><span class="lnum">032</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Saving Sea Turtles<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Prototype turtle-safe beach lighting</span></span></a>
+  <a href="lessons/lesson_033.html" class="lc"><span class="lnum">033</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Light-Up Fishing Nets<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Prototype safer fishing nets</span></span></a>
+  <a href="lessons/lesson_034.html" class="lc"><span class="lnum">034</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Send a Smile<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Share some happiness with radio</span></span></a>
+  <a href="lessons/lesson_035.html" class="lc"><span class="lnum">035</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Animal Tracker<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Build a prototype radio animal tracker</span></span></a>
+  <a href="lessons/lesson_036.html" class="lc"><span class="lnum">036</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Touch Emotion Badge<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Add an extra emotion with touch</span></span></a>
+  <a href="lessons/lesson_037.html" class="lc"><span class="lnum">037</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Clap Hearts<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Clap your hands to make the micro:bit heart beat</span></span></a>
+  <a href="lessons/lesson_038.html" class="lc"><span class="lnum">038</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Disco Lights<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make lights flash to the rhythm</span></span></a>
+  <a href="lessons/lesson_039.html" class="lc"><span class="lnum">039</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Sound Meter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure the noise around you</span></span></a>
+  <a href="lessons/lesson_040.html" class="lc"><span class="lnum">040</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Touch Heart<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Touch your micro:bit to light up the heart</span></span></a>
+  <a href="lessons/lesson_041.html" class="lc"><span class="lnum">041</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Sound Emotion Badge<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Express yourself with sound</span></span></a>
+  <a href="lessons/lesson_042.html" class="lc"><span class="lnum">042</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Sensory Toy<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a multi-sensory toy</span></span></a>
+  <a href="lessons/lesson_043.html" class="lc"><span class="lnum">043</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Metronome<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Help practice your music</span></span></a>
+  <a href="lessons/lesson_044.html" class="lc"><span class="lnum">044</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Clap Lights<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Control lights with sound</span></span></a>
+  <a href="lessons/lesson_045.html" class="lc"><span class="lnum">045</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Which Way Now?<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Be given a random direction when walking</span></span></a>
+  <a href="lessons/lesson_046.html" class="lc"><span class="lnum">046</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Species Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Count different species of plants and animals</span></span></a>
+  <a href="lessons/lesson_047.html" class="lc"><span class="lnum">047</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Water Bottle Alert<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">See if someone else has drunk from your bottle</span></span></a>
+  <a href="lessons/lesson_048.html" class="lc"><span class="lnum">048</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Cookie Tin Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Protect your cookies with a light sensor alarm</span></span></a>
+  <a href="lessons/lesson_049.html" class="lc"><span class="lnum">049</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Get Up!<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Let your BBC micro:bit get you up in the morning</span></span></a>
+  <a href="lessons/lesson_050.html" class="lc"><span class="lnum">050</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Times Tables Tester<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Test your knowledge of times tables</span></span></a>
+  <a href="lessons/lesson_051.html" class="lc"><span class="lnum">051</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Meet Your micro:bit<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">An interactive physical computing exploration</span></span></a>
+  <a href="lessons/lesson_052.html" class="lc"><span class="lnum">052</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Festive Decoration<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play a festive animation when it gets dark</span></span></a>
+  <a href="lessons/lesson_053.html" class="lc"><span class="lnum">053</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Environment Exploration<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure temperature, sound and light levels around you</span></span></a>
+  <a href="lessons/lesson_054.html" class="lc"><span class="lnum">054</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Dance Steps<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use loops to help create a dance routine</span></span></a>
+  <a href="lessons/lesson_055.html" class="lc"><span class="lnum">055</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Snow Globe<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Shake your micro:bit to make it snow</span></span></a>
+  <a href="lessons/lesson_056.html" class="lc"><span class="lnum">056</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Shake and Sounds<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Shake your micro:bit to hear a cheerful tune</span></span></a>
+  <a href="lessons/lesson_057.html" class="lc"><span class="lnum">057</span><span class="ltitle"><span class="level-pill pill-beg">Beginner</span><br>Audible Emotion Badge<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play happy and sad sounds using buttons</span></span></a>
+</div>
+
+
+  <div class="phase-div sr"><span>Phase 2 — Intermediate (058–104) · 47 Projects</span></div>
+  <div class="lesson-grid sr">
+  <a href="lessons/lesson_058.html" class="lc"><span class="lnum">058</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sensitive Step Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a more accurate step-counter</span></span></a>
+  <a href="lessons/lesson_059.html" class="lc"><span class="lnum">059</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Compass North<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Create a simple compass to show which way is North</span></span></a>
+  <a href="lessons/lesson_060.html" class="lc"><span class="lnum">060</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Max-Min Thermometer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Track high and low temperatures with your micro:bit</span></span></a>
+  <a href="lessons/lesson_061.html" class="lc"><span class="lnum">061</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Make Some Noise<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Connect headphones or speakers to make noise</span></span></a>
+  <a href="lessons/lesson_062.html" class="lc"><span class="lnum">062</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Frere Jacques Loops<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Program your micro:bit to play a tune using loops</span></span></a>
+  <a href="lessons/lesson_063.html" class="lc"><span class="lnum">063</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Group Teleporting Duck<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Teleport ducks in a multi-player game</span></span></a>
+  <a href="lessons/lesson_064.html" class="lc"><span class="lnum">064</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Tell Me a Secret<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Swap secrets with a friend using radio</span></span></a>
+  <a href="lessons/lesson_065.html" class="lc"><span class="lnum">065</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Indoor-Outdoor Thermometer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Sense how warm or cold it is outside</span></span></a>
+  <a href="lessons/lesson_066.html" class="lc"><span class="lnum">066</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Heartbeat Beacon<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Keep precious things close with 2 micro:bits</span></span></a>
+  <a href="lessons/lesson_067.html" class="lc"><span class="lnum">067</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Treasure Hunt<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Multi-player radio treasure hunt game</span></span></a>
+  <a href="lessons/lesson_068.html" class="lc"><span class="lnum">068</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Activity Array<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use lists to manage your activity picker</span></span></a>
+  <a href="lessons/lesson_069.html" class="lc"><span class="lnum">069</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Fahrenheit Thermometer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use functions to convert Celsius to Fahrenheit</span></span></a>
+  <a href="lessons/lesson_070.html" class="lc"><span class="lnum">070</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Jukebox with Volume<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Add a volume control to your sound projects</span></span></a>
+  <a href="lessons/lesson_071.html" class="lc"><span class="lnum">071</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Simple Door Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Has anyone opened your door?</span></span></a>
+  <a href="lessons/lesson_072.html" class="lc"><span class="lnum">072</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Touch Timer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Simple timer for the new touch logo</span></span></a>
+  <a href="lessons/lesson_073.html" class="lc"><span class="lnum">073</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Touch Stopwatch<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a stopwatch using the touch logo</span></span></a>
+  <a href="lessons/lesson_074.html" class="lc"><span class="lnum">074</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sound Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure noise levels around you</span></span></a>
+  <a href="lessons/lesson_075.html" class="lc"><span class="lnum">075</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>micro:bit Pet<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Code your own electronic pet</span></span></a>
+  <a href="lessons/lesson_076.html" class="lc"><span class="lnum">076</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Spirit Level<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a practical spirit-level tool with sound</span></span></a>
+  <a href="lessons/lesson_077.html" class="lc"><span class="lnum">077</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sound Compass<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Find North by sound and light</span></span></a>
+  <a href="lessons/lesson_078.html" class="lc"><span class="lnum">078</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Candle<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Blow out an electronic candle</span></span></a>
+  <a href="lessons/lesson_079.html" class="lc"><span class="lnum">079</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Clap-o-Meter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure the length of applause</span></span></a>
+  <a href="lessons/lesson_080.html" class="lc"><span class="lnum">080</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Traffic Survey Data Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Survey traffic, wildlife or anything around you</span></span></a>
+  <a href="lessons/lesson_081.html" class="lc"><span class="lnum">081</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Environment Data Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Record and study data about the world around you</span></span></a>
+  <a href="lessons/lesson_082.html" class="lc"><span class="lnum">082</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Movement Data Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use data logging to make a better step counter</span></span></a>
+  <a href="lessons/lesson_083.html" class="lc"><span class="lnum">083</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Conductivity Tester<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Investigate if a material conducts electricity</span></span></a>
+  <a href="lessons/lesson_084.html" class="lc"><span class="lnum">084</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sound Insulation Meter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Test which materials are best sound insulators</span></span></a>
+  <a href="lessons/lesson_085.html" class="lc"><span class="lnum">085</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Kick Strength Data Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use data science to improve your sports skills</span></span></a>
+  <a href="lessons/lesson_086.html" class="lc"><span class="lnum">086</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Funny Voice Recorder<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Turn your micro:bit into a voice changer</span></span></a>
+  <a href="lessons/lesson_087.html" class="lc"><span class="lnum">087</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Secure Messaging<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Send encrypted radio messages between micro:bits</span></span></a>
+  <a href="lessons/lesson_088.html" class="lc"><span class="lnum">088</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Hot Potato Game<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play hot potato using a micro:bit</span></span></a>
+  <a href="lessons/lesson_089.html" class="lc"><span class="lnum">089</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Hot and Cold Game<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">A fun two-player game using radio signal strength</span></span></a>
+  <a href="lessons/lesson_090.html" class="lc"><span class="lnum">090</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Distance Calculator<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use your micro:bit to measure distances</span></span></a>
+  <a href="lessons/lesson_091.html" class="lc"><span class="lnum">091</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Poetry Generator<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Generate random phrases to use in a poem</span></span></a>
+  <a href="lessons/lesson_092.html" class="lc"><span class="lnum">092</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Odd and Even Numbers<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Find out if a number is odd or even</span></span></a>
+  <a href="lessons/lesson_093.html" class="lc"><span class="lnum">093</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Simple AI Exercise Timer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a smart exercise timer using AI</span></span></a>
+  <a href="lessons/lesson_094.html" class="lc"><span class="lnum">094</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Halloween Project<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Scare your friends with your micro:bit</span></span></a>
+  <a href="lessons/lesson_095.html" class="lc"><span class="lnum">095</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>AI Activity Timer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use AI to detect and time specific activities</span></span></a>
+  <a href="lessons/lesson_096.html" class="lc"><span class="lnum">096</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>AI Storytelling Friend<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Use storytelling to introduce AI</span></span></a>
+  <a href="lessons/lesson_097.html" class="lc"><span class="lnum">097</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Light Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Investigate materials to see how much light they let through</span></span></a>
+  <a href="lessons/lesson_098.html" class="lc"><span class="lnum">098</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Human Circuit Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Complete an electrical circuit with your body</span></span></a>
+  <a href="lessons/lesson_099.html" class="lc"><span class="lnum">099</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Sound Volume Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure sound over distance</span></span></a>
+  <a href="lessons/lesson_100.html" class="lc"><span class="lnum">100</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Evaporation Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Discover evaporation rates in different locations</span></span></a>
+  <a href="lessons/lesson_101.html" class="lc"><span class="lnum">101</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Insulating Heat Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Investigate the thermal insulation properties of materials</span></span></a>
+  <a href="lessons/lesson_102.html" class="lc"><span class="lnum">102</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Solar Panel Experiment<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Decide where to put a solar panel with your micro:bit</span></span></a>
+  <a href="lessons/lesson_103.html" class="lc"><span class="lnum">103</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>AI Light Switch<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Clap to turn on the lights using AI</span></span></a>
+  <a href="lessons/lesson_104.html" class="lc"><span class="lnum">104</span><span class="ltitle"><span class="level-pill pill-int">Intermediate</span><br>Audible Cookie Tin Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Protect your cookies with an audible alarm</span></span></a>
+</div>
+
+
+  <div class="phase-div sr"><span>Phase 3 — Advanced (105–123) · 19 Projects</span></div>
+  <div class="lesson-grid sr">
+  <a href="lessons/lesson_105.html" class="lc"><span class="lnum">105</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Proximity Beacon<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Sense when something is getting close using radio</span></span></a>
+  <a href="lessons/lesson_106.html" class="lc"><span class="lnum">106</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Guitar 1 Touch Tunes<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Create and play a micro:bit guitar</span></span></a>
+  <a href="lessons/lesson_107.html" class="lc"><span class="lnum">107</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Guitar 2 Chords<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play chords on your micro:bit guitar</span></span></a>
+  <a href="lessons/lesson_108.html" class="lc"><span class="lnum">108</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Guitar 3 Octaves<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Change octaves on your micro:bit guitar or keyboard</span></span></a>
+  <a href="lessons/lesson_109.html" class="lc"><span class="lnum">109</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Tilt Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a radio-controlled burglar alarm</span></span></a>
+  <a href="lessons/lesson_110.html" class="lc"><span class="lnum">110</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Light Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make an alarm that goes off when lights go on</span></span></a>
+  <a href="lessons/lesson_111.html" class="lc"><span class="lnum">111</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Pressure Switch Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Create a wireless intruder alarm using a pressure switch</span></span></a>
+  <a href="lessons/lesson_112.html" class="lc"><span class="lnum">112</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Radio Door Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make your own micro:bit wireless door alarm</span></span></a>
+  <a href="lessons/lesson_113.html" class="lc"><span class="lnum">113</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>PIR Movement Alarm<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a wireless intruder alarm to detect movement</span></span></a>
+  <a href="lessons/lesson_114.html" class="lc"><span class="lnum">114</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Reaction Game<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Make a 2-player reaction speed game</span></span></a>
+  <a href="lessons/lesson_115.html" class="lc"><span class="lnum">115</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Fireflies<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Glowing micro:bits that mimic synchronising fireflies</span></span></a>
+  <a href="lessons/lesson_116.html" class="lc"><span class="lnum">116</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Max-Min Temperature Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Store temperature readings over extended time periods</span></span></a>
+  <a href="lessons/lesson_117.html" class="lc"><span class="lnum">117</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Energy Light Meter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Measure the strength of light in different places</span></span></a>
+  <a href="lessons/lesson_118.html" class="lc"><span class="lnum">118</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Energy Light Timer<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Time how long your lights are on to save energy</span></span></a>
+  <a href="lessons/lesson_119.html" class="lc"><span class="lnum">119</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Energy Cost Calculator<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Calculate your energy costs with your micro:bit</span></span></a>
+  <a href="lessons/lesson_120.html" class="lc"><span class="lnum">120</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>AI Sports Data Logger<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Log time spent running, walking and being still using AI</span></span></a>
+  <a href="lessons/lesson_121.html" class="lc"><span class="lnum">121</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Audible Teleporting Duck<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Send a duck between two micro:bits and hear it say hello</span></span></a>
+  <a href="lessons/lesson_122.html" class="lc"><span class="lnum">122</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>10 Steps Counter<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Counts exactly 10 steps then plays a congratulatory tune</span></span></a>
+  <a href="lessons/lesson_123.html" class="lc"><span class="lnum">123</span><span class="ltitle"><span class="level-pill pill-adv">Advanced</span><br>Audible Rock Paper Scissors<br><span style="font-size:.74rem;color:var(--muted);font-weight:400">Play rock, paper, scissors with sound effects using radio</span></span></a>
+</div>
+
+
+</div></section>
+
+<section class="sec sec-div"><div class="wrap sr">
+  <div class="slbl">How It Works</div>
+  <h2 class="sec-h2" style="margin-bottom:3rem">Learn at your own pace.</h2>
+  <div class="steps-row">
+    <div class="step"><div class="step-n">01</div><h3>Get a micro:bit</h3><p>BBC micro:bit v2 is widely available from electronics suppliers. A USB cable and Chrome browser are all you need to start.</p></div>
+    <div class="step"><div class="step-n">02</div><h3>Pick a Project</h3><p>Browse the 123 projects above. Start at 001 or jump to any level. Each card shows the title and a short description.</p></div>
+    <div class="step"><div class="step-n">03</div><h3>Open micro:bit.org</h3><p>Every project page has a red button that opens the official guide and MakeCode editor directly on microbit.org.</p></div>
+    <div class="step"><div class="step-n">04</div><h3>Build &amp; Extend</h3><p>Follow the official guide, upload to your micro:bit, and try the extension challenges at the end of each project.</p></div>
   </div>
-</section>
+</div></section>
 </main>
 
 <footer>
   <div class="fi">
-    <div>
-      <div class="fb">Robotics &amp; micro:bit</div>
-      <p>Part of the Techbase STEM Academy free course series. Projects sourced from the official microbit.org catalogue. Ibadan, Nigeria.</p>
-    </div>
-    <div>
-      <p class="fl-h">Phases</p>
-      <ul class="fl">
-        <li><a href="#lessons">Phase 1 — Beginner</a></li>
-        <li><a href="#lessons">Phase 2 — Intermediate</a></li>
-        <li><a href="#lessons">Phase 3 — Advanced</a></li>
-        <li><a href="https://github.com/techbaseng/techbase-robotics" target="_blank">GitHub Repo</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="fl-h">Resources</p>
-      <ul class="fl">
-        <li><a href="https://microbit.org/projects/make-it-code-it/" target="_blank">microbit.org Projects</a></li>
-        <li><a href="https://makecode.microbit.org/" target="_blank">MakeCode Editor</a></li>
-        <li><a href="https://microbit.org/buy/" target="_blank">Buy a micro:bit</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="fl-h">Academy</p>
-      <ul class="fl">
-        <li><a href="https://techbaseng.github.io">← All Courses</a></li>
-        <li><a href="https://techbaseng.github.io/techbase-scratch/">Scratch →</a></li>
-        <li><a href="https://techbasengr.com.ng" target="_blank">Website</a></li>
-      </ul>
-    </div>
+    <div><div class="fb">Robotics &amp; micro:bit</div><p>All 123 projects sourced from the official microbit.org Make It: Code It catalogue. Part of the Techbase STEM Academy. Ibadan, Nigeria.</p></div>
+    <div><p class="fl-h">Phases</p><ul class="fl">
+      <li><a href="#lessons">Phase 1 — Beginner (57)</a></li>
+      <li><a href="#lessons">Phase 2 — Intermediate (47)</a></li>
+      <li><a href="#lessons">Phase 3 — Advanced (19)</a></li>
+    </ul></div>
+    <div><p class="fl-h">Resources</p><ul class="fl">
+      <li><a href="https://microbit.org/projects/make-it-code-it/" target="_blank">microbit.org Projects</a></li>
+      <li><a href="https://makecode.microbit.org/" target="_blank">MakeCode Editor</a></li>
+      <li><a href="https://microbit.org/buy/" target="_blank">Buy a micro:bit</a></li>
+      <li><a href="https://github.com/techbaseng/techbase-robotics" target="_blank">GitHub Repo</a></li>
+    </ul></div>
+    <div><p class="fl-h">Academy</p><ul class="fl">
+      <li><a href="https://techbaseng.github.io">← All Courses</a></li>
+      <li><a href="https://techbaseng.github.io/techbase-scratch/">Scratch</a></li>
+      <li><a href="https://techbasengr.com.ng" target="_blank">Website</a></li>
+    </ul></div>
   </div>
-  <div class="f-bot">
-    <span>© 2025 Techbase Consultant Services</span>
-    <span>MIT License · Made with ❤️ in Ibadan</span>
-  </div>
+  <div class="f-bot"><span>© 2025 Techbase Consultant Services</span><span>MIT License · Made with ❤️ in Ibadan</span></div>
 </footer>
 
 <script>
-const io = new IntersectionObserver(
-  es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
-  { threshold: .07 }
-);
-document.querySelectorAll('.sr').forEach(el => io.observe(el));
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.07});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
 </script>
-
 </body>
 </html>

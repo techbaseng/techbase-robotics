@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 020: Scratch Hungry Dino — Techbase Robotics &amp; micro:bit</title>
+<meta name="description" content="Make your own wireless game controller for Scratch">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>:root{--bg:#f8fafc;--surface:#fff;--s2:#f1f5f9;--border:#e2e8f0;--border2:#cbd5e1;--text:#0f172a;--t2:#334155;--muted:#64748b;--D:'Space Grotesk',sans-serif;--B:'Plus Jakarta Sans',sans-serif;--M:'JetBrains Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--B);font-size:16px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 2rem}
+.nav-inner{max-width:900px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--D);font-weight:700;font-size:.9rem;color:var(--text);text-decoration:none}
+.nav-logo em{font-style:normal;color:#7c3aed}
+.nav-back{font-size:.83rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
+.nav-back:hover{color:#7c3aed}
+.lesson-hero{padding:86px 2rem 46px;background:linear-gradient(160deg,#f5f3ff 0%,#f8fafc 55%,#ede9fe 100%);border-bottom:1px solid var(--border)}
+.lesson-hero-inner{max-width:900px;margin:0 auto}
+.lesson-n{font-family:var(--M);font-size:.7rem;color:var(--muted);margin-bottom:.45rem;font-weight:500;letter-spacing:.05em}
+.level-badge{display:inline-flex;align-items:center;border-radius:100px;padding:.22rem .85rem;font-family:var(--M);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;border:1px solid}
+.badge-beg{color:#059669;background:rgba(5,150,105,.07);border-color:rgba(5,150,105,.3)}
+.badge-int{color:#d97706;background:rgba(217,119,6,.07);border-color:rgba(217,119,6,.3)}
+.badge-adv{color:#7c3aed;background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.3)}
+.lesson-hero h1{font-family:var(--D);font-weight:700;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-.025em;line-height:1.12;color:var(--text);margin-bottom:.7rem}
+.lesson-tagline{font-size:.98rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;max-width:580px}
+.rpi-btn{display:inline-flex;align-items:center;gap:.55rem;background:#7c3aed;color:#fff;font-family:var(--D);font-weight:700;font-size:.9rem;padding:.85rem 1.9rem;border-radius:10px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 14px rgba(124,58,237,.3)}
+.rpi-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.42)}
+.rpi-note{display:block;font-size:.74rem;color:var(--muted);margin-top:.4rem}
+main{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem}
+.content-grid{display:grid;grid-template-columns:1fr 260px;gap:2.5rem;align-items:start}
+.lesson-body h2{font-family:var(--D);font-weight:700;font-size:1.18rem;letter-spacing:-.015em;color:var(--text);margin:2rem 0 .85rem;padding-top:2rem;border-top:1px solid var(--border)}
+.lesson-body h2:first-child{border-top:none;padding-top:0;margin-top:0}
+.lesson-body p{color:var(--t2);line-height:1.8;margin-bottom:.85rem;font-size:.93rem}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem}
+.check-list li{display:flex;align-items:flex-start;gap:.65rem;font-size:.9rem;color:var(--t2);line-height:1.65}
+.check-list li::before{content:'✓';color:#7c3aed;font-family:var(--M);font-weight:700;flex-shrink:0;font-size:.78rem;margin-top:3px}
+.info-box{background:#f5f3ff;border:1.5px solid #ddd6fe;border-radius:12px;padding:1.2rem 1.4rem;margin:1.2rem 0}
+.info-box p{margin:0;font-size:.88rem;color:#4c1d95;line-height:1.7}
+.info-box strong{color:#6d28d9}
+.sidebar{position:sticky;top:78px;display:flex;flex-direction:column;gap:.85rem}
+.side-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;overflow:hidden}
+.side-head{padding:.6rem 1rem;background:var(--s2);border-bottom:1px solid var(--border);font-family:var(--D);font-size:.67rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.side-body{padding:.8rem 1rem;display:flex;flex-direction:column;gap:.45rem}
+.side-row{font-size:.83rem;color:var(--t2);line-height:1.5;display:flex;align-items:flex-start;gap:.5rem}
+.side-row::before{content:'·';color:var(--muted);flex-shrink:0;line-height:1.2}
+.concept-tag{display:inline-block;font-family:var(--M);font-size:.61rem;padding:.14rem .48rem;border-radius:5px;border:1px solid rgba(124,58,237,.22);background:rgba(124,58,237,.06);color:#6d28d9;margin:.1rem .07rem}
+.lesson-nav{display:flex;align-items:center;justify-content:space-between;margin-top:3rem;padding-top:1.8rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.75rem}
+.l-nav-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface);color:var(--t2);font-family:var(--D);font-weight:600;font-size:.82rem;padding:.65rem 1.2rem;border-radius:8px;text-decoration:none;border:1.5px solid var(--border);transition:border-color .2s,color .2s}
+.l-nav-btn:hover{border-color:#7c3aed;color:#7c3aed}
+.l-nav-btn.primary{background:#7c3aed;color:#fff;border-color:#7c3aed}
+.l-nav-btn.primary:hover{background:#6d28d9;border-color:#6d28d9}
+.lesson-footer{background:#0f172a;color:rgba(255,255,255,.45);padding:1.6rem 2rem;text-align:center;font-size:.75rem}
+.lesson-footer a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}
+.lesson-footer a:hover{color:#fff}
+@media(max-width:740px){.content-grid{grid-template-columns:1fr}.sidebar{position:static}}
+@media(max-width:480px){.lesson-hero h1{font-size:1.5rem}}</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><em>Techbase</em> Robotics &amp; micro:bit</a>
+    <a href="../index.html" class="nav-back">← All 123 Projects</a>
+  </div>
+</nav>
+<section class="lesson-hero">
+  <div class="lesson-hero-inner">
+    <div class="lesson-n">Project 020 of 123 &nbsp;·&nbsp; Robotics &amp; micro:bit</div>
+    <span class="level-badge badge-beg">Beginner · Phase 1</span>
+    <h1>Scratch Hungry Dino</h1>
+    <p class="lesson-tagline">Make your own wireless game controller for Scratch.</p>
+    <a href="https://microbit.org/projects/make-it-code-it/scratch-hungry-dino/" class="rpi-btn" target="_blank" rel="noopener">🔴&nbsp; Open on micro:bit.org &nbsp;↗</a>
+    <span class="rpi-note">Opens the official project page with full instructions and MakeCode starter code</span>
+  </div>
+</section>
+<main>
+  <div class="content-grid">
+    <div class="lesson-body">
+      <h2>About This Project</h2>
+      <p>Make your own wireless game controller for Scratch. Open the official project page using the button above — it contains the complete step-by-step build guide, MakeCode starter file, and example code you can remix directly.</p>
+      <div class="info-box">
+        <p>🔴 <strong>This project is hosted on microbit.org.</strong> Click the purple button above to open the full guide, starter code and MakeCode editor. Everything you need is on that page — follow the official instructions alongside this lesson summary.</p>
+      </div>
+      <h2>What You Will Learn</h2>
+      <ul class="check-list"><li>Connect the micro:bit to Scratch as a wireless controller</li><li>Use Scratch extensions to respond to micro:bit inputs</li><li>Follow step-by-step instructions on the official micro:bit project page</li></ul>
+      <h2>How to Get Started</h2>
+      <p>1. Click <strong>Open on micro:bit.org</strong> above to go to the official project page.</p>
+      <p>2. Read the project overview and check what hardware you need from the sidebar.</p>
+      <p>3. Open the <strong>MakeCode editor</strong> link on the project page — either use the starter code provided or start from scratch.</p>
+      <p>4. Build the project step by step, testing on your micro:bit as you go.</p>
+      <p>5. Once complete, try the <strong>extension challenges</strong> listed at the bottom of the official page.</p>
+      <div class="lesson-nav">
+        <a href="lesson_019.html" class="l-nav-btn">← 019</a>
+        <a href="https://microbit.org/projects/make-it-code-it/scratch-hungry-dino/" class="l-nav-btn" target="_blank" rel="noopener">🔴 micro:bit.org ↗</a>
+        <a href="lesson_021.html" class="l-nav-btn primary">021 →</a>
+      </div>
+    </div>
+    <aside class="sidebar">
+      <div class="side-card">
+        <div class="side-head">Level</div>
+        <div class="side-body"><span class="level-badge badge-beg" style="margin:0">Beginner</span></div>
+      </div>
+      <div class="side-card">
+        <div class="side-head">Key Concepts</div>
+        <div class="side-body" style="flex-direction:row;flex-wrap:wrap"><span class="concept-tag">LED display</span><span class="concept-tag">Programming</span><span class="concept-tag">Inputs</span></div>
+      </div>
+      <div class="side-card">
+        <div class="side-head">You Will Need</div>
+        <div class="side-body">
+          <div class="side-row">BBC micro:bit v2</div>
+          <div class="side-row">USB cable</div>
+          <div class="side-row">Chrome or Edge browser</div>
+          <div class="side-row">MakeCode editor (free online)</div>
+        </div>
+      </div>
+      <div class="side-card">
+        <div class="side-head">Official Project</div>
+        <div class="side-body">
+          <a href="https://microbit.org/projects/make-it-code-it/scratch-hungry-dino/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;background:#7c3aed;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.8rem;padding:.7rem 1rem;border-radius:8px;text-decoration:none">🔴 Open on micro:bit.org ↗</a>
+          <p style="font-size:.72rem;color:var(--muted);margin-top:.55rem;line-height:1.55">Full guide, starter code and MakeCode editor on the official micro:bit website.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer class="lesson-footer">
+  <a href="../index.html">← Robotics &amp; micro:bit</a> &nbsp;·&nbsp;
+  <a href="https://techbaseng.github.io">Techbase Academy</a> &nbsp;·&nbsp;
+  © 2025 Techbase Consultant Services, Ibadan
+</footer>
+</body>
+</html>
