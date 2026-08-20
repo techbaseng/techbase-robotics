@@ -5,6 +5,10 @@ title: Robotics & micro:bit — Techbase STEM Academy
 
 # 🤖 Robotics & micro:bit — Techbase STEM Academy
 
+**Live:** https://techbaseng.github.io/techbase-robotics/
+
+**Tech stack:** static HTML lessons (one file per project, 123 total) + Jekyll (`minima` theme) for the course README page; `index.html` is a hand-built static homepage served as-is, outside Jekyll's layout system.
+
 > Free robotics course · All 123 official BBC micro:bit projects from microbit.org
 > [← All Courses](https://techbaseng.github.io) | [GitHub Repo](https://github.com/techbaseng/techbase-robotics)
 
